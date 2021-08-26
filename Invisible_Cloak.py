@@ -31,7 +31,7 @@ for i in range(30):
 
 
 
-#Now comes the real part where we can experimenting being invisible
+#Now comes the real part where we can experience being invisible
 
 while(cap.isOpened()):
     
@@ -72,7 +72,7 @@ while(cap.isOpened()):
     
 
     #open Morphology reduces noices
-    #dialte dilate makes the image more smoother
+    #Morphology dilate makes the image more smoother
     mask1=cv2.morphologyEx(mask1,cv2.MORPH_OPEN,np.ones((3,3),np.uint8),iterations=2)
     mask1=cv2.morphologyEx(mask1,cv2.MORPH_DILATE,np.ones((3,3),np.uint8),iterations=1)
     
