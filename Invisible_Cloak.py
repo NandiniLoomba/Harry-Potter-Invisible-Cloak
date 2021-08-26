@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import time
 
-#This function is basically starting you webcam
-#The parameter which it takes , it depends upon your system like for deafult camera use 0
+#This function is basically starting the webcam
+#The parameter which it takes depends upon your system like for deafult camera use 0
 #as im using external webcam so i provided 1
 cap=cv2.VideoCapture(1)
 
@@ -56,12 +56,12 @@ while(cap.isOpened()):
 
     hsv=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
     
-    #In hsv color space red color comes in two different ranges
+    #In hsv color space, red color comes in two different ranges
 
     lower_red = np.array([0,120,70])
     upper_red = np.array([10,255,255])
 
-    #masking is like : pixels whose value lies in lower and upper range are visible in white, rest all the black 
+    #masking is like : pixels whose value lies in lower and upper range are visible in white, rest all are in black 
     mask1=cv2.inRange(hsv,lower_red,upper_red)
 
     lower_red=np.array([170,120,70])
