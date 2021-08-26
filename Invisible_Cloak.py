@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 #This function is basically starting the webcam
-#The parameter which it takes depends upon your system like for deafult camera use 0
+#The parameter which it takes depends upon your system like for default camera use 0
 #as im using external webcam so i provided 1
 cap=cv2.VideoCapture(1)
 
